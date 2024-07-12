@@ -1,11 +1,10 @@
 package com.example.hrms.business.concretes;
 
 import com.example.hrms.business.abstracts.EmployerService;
-import com.example.hrms.business.rules.concretes.EmployerRules;
+import com.example.hrms.business.rules.EmployerRules;
 import com.example.hrms.core.utilities.results.DataResult;
 import com.example.hrms.core.utilities.results.Result;
 import com.example.hrms.core.utilities.results.SuccessDataResult;
-import com.example.hrms.core.utilities.results.SuccessResult;
 import com.example.hrms.dataAccess.abstracts.EmployerDao;
 import com.example.hrms.entities.concretes.Employer;
 import com.example.hrms.entities.dtos.EmployerDto;
@@ -16,9 +15,9 @@ import java.util.List;
 
 @Service
 public class EmployerManager implements EmployerService {
-    private EmployerDao employerDao;
-    private EmployerRules employerRules;
-    private ModelMapper modelMapper;
+    private final EmployerDao employerDao;
+    private final EmployerRules employerRules;
+    private final ModelMapper modelMapper;
 
     public EmployerManager(EmployerDao employerDao, EmployerRules employerRules, ModelMapper modelMapper) {
         this.employerDao = employerDao;

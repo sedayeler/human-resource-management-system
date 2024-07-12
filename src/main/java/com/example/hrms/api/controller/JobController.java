@@ -11,11 +11,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/jobs")
+@RequestMapping("/api/job")
 public class JobController {
-    JobService jobService;
+    private final JobService jobService;
 
-    @Autowired
     public JobController(JobService jobService) {
         this.jobService = jobService;
     }

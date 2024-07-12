@@ -1,4 +1,4 @@
-package com.example.hrms.business.rules.concretes;
+package com.example.hrms.business.rules;
 
 import com.example.hrms.business.verification.abstracts.EmailVerificationService;
 import com.example.hrms.business.verification.abstracts.EmployeeCheckService;
@@ -7,16 +7,14 @@ import com.example.hrms.core.utilities.results.Result;
 import com.example.hrms.core.utilities.results.SuccessResult;
 import com.example.hrms.dataAccess.abstracts.EmployeeDao;
 import com.example.hrms.entities.dtos.EmployeeDto;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class EmployeeRules {
-    private EmployeeDao employeeDao;
-    private EmployeeCheckService employeeCheckService;
-    private EmailVerificationService emailVerificationService;
+    private final EmployeeDao employeeDao;
+    private final EmployeeCheckService employeeCheckService;
+    private final EmailVerificationService emailVerificationService;
 
-    @Autowired
     public EmployeeRules(EmployeeDao employeeDao, EmployeeCheckService employeeCheckService, EmailVerificationService emailVerificationService) {
         this.employeeDao = employeeDao;
         this.employeeCheckService = employeeCheckService;

@@ -14,7 +14,7 @@ public class Job {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "job", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "job")
     private List<JobAdvertisement> jobAdvertisements;
 
     public Job() {

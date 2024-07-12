@@ -8,7 +8,6 @@ import java.util.regex.Pattern;
 
 @Service
 public class EmailVerificationManager implements EmailVerificationService {
-
     private static final String EMAIL_PATTERN =
             "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
 

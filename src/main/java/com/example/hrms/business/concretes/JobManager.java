@@ -1,7 +1,7 @@
 package com.example.hrms.business.concretes;
 
 import com.example.hrms.business.abstracts.JobService;
-import com.example.hrms.business.rules.concretes.JobRules;
+import com.example.hrms.business.rules.JobRules;
 import com.example.hrms.core.utilities.results.*;
 import com.example.hrms.dataAccess.abstracts.JobDao;
 import com.example.hrms.entities.concretes.Job;
@@ -14,11 +14,10 @@ import java.util.List;
 
 @Service
 public class JobManager implements JobService {
-    private JobDao jobDao;
-    private ModelMapper modelMapper;
-    private JobRules jobRules;
+    private final JobDao jobDao;
+    private final ModelMapper modelMapper;
+    private final JobRules jobRules;
 
-    @Autowired
     public JobManager(JobDao jobDao, ModelMapper modelMapper, JobRules jobRules) {
         this.jobDao = jobDao;
         this.modelMapper = modelMapper;

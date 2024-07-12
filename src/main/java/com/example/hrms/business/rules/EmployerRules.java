@@ -1,4 +1,4 @@
-package com.example.hrms.business.rules.concretes;
+package com.example.hrms.business.rules;
 
 import com.example.hrms.business.verification.abstracts.EmailVerificationService;
 import com.example.hrms.core.utilities.results.ErrorResult;
@@ -11,10 +11,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class EmployerRules {
-    private EmployerDao employerDao;
-    private EmailVerificationService emailVerificationService;
+    private final EmployerDao employerDao;
+    private final EmailVerificationService emailVerificationService;
 
-    @Autowired
     public EmployerRules(EmployerDao employerDao, EmailVerificationService emailVerificationService) {
         this.employerDao = employerDao;
         this.emailVerificationService = emailVerificationService;

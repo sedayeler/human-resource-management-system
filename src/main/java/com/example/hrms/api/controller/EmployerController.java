@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/employers")
+@RequestMapping("/api/employer")
 public class EmployerController {
-    private EmployerService employerService;
+    private final EmployerService employerService;
 
     public EmployerController(EmployerService employerService) {
         this.employerService = employerService;

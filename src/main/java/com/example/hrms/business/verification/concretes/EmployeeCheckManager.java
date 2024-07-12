@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class EmployeeCheckManager implements EmployeeCheckService {
-
     @Override
     public boolean isRealPerson(EmployeeDto employeeDto) throws Exception {
         SVMKPSPublicSoap client = new SVMKPSPublicSoap();

@@ -18,7 +18,7 @@ public class Employee extends User {
     @Column(name = "date_of_birth_year")
     private Integer dateOfBirthYear;
 
-    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "employee")
     private List<JobAdvertisement> jobAdvertisements;
 
     public Employee() {
